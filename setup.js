@@ -3,7 +3,6 @@ var collections = require("metalsmith-collections");
 var layouts = require("metalsmith-layouts");
 var markdown = require("metalsmith-markdown");
 var permalinks = require("metalsmith-permalinks");
-var postcss = require("metalsmith-postcss");
 
 module.exports = Metalsmith(__dirname) // __dirname defined by node.js:
   // name of current working directory
@@ -35,12 +34,5 @@ module.exports = Metalsmith(__dirname) // __dirname defined by node.js:
     layouts({
       // wrap layouts around html
       engine: "handlebars" // use the layout engine you like
-    })
-  )
-  .use(
-    postcss({
-      plugins: {
-        autoprefixer: {}
-      }
     })
   );

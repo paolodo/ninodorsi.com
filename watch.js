@@ -1,8 +1,16 @@
 var website = require("./setup");
 var express = require("metalsmith-express");
 var watch = require("metalsmith-watch");
+var postcss = require("metalsmith-postcss");
 
 website
+  .use(
+    postcss({
+      plugins: {
+        autoprefixer: {}
+      }
+    })
+  )
   .use(express())
   .use(
     watch({
