@@ -16,7 +16,7 @@ website
     watch({
       paths: {
         "${source}/**/*": true,
-        "layouts/**/*": "**/*.html"
+        "layouts/**/*": true
       }
     })
   )
