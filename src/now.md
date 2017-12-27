@@ -1,5 +1,5 @@
 ---
-layout: layout.html
+layout: default.html
 title: What I’m Doing Now
 ---
 

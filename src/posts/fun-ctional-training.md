@@ -1,6 +1,6 @@
 ---
+layout: default.html
 title: Fun-ctional Training
-layout: layout.html
 ---
 
 In my training experience, i started like **you**,

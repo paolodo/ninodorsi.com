@@ -12,35 +12,33 @@ var renderer = Object.assign(new marked.Renderer(), {
     }>${text}</a>`
 });
 
-module.exports = Metalsmith(__dirname) // __dirname defined by node.js:
-  // name of current working directory
+module.exports = Metalsmith(__dirname)
   .metadata({
-    // add any variable you want
-    // use them in layout-files
-    sitename: "Nino D'Orsi ",
-    siteurl: "https://ninodorsi.com/",
+    sitename: "Nino D'Orsi",
     description:
-      "Rediscover the movements your body is designed to do in a fun setting! "
+      "Rediscover the movements your body is designed to do in a fun setting!",
+    contacts: {
+      phone: "+32 484604013",
+      email: "ninodorsi@gmail.com"
+    }
   })
-  .source("./src") // source directory
-  .destination("./build") // destination directory
-  .clean(true) // clean destination before
+  .source("./src")
+  .destination("./build")
+  .clean(true)
   .use(
     collections({
-      // group all blog posts by internally
-      posts: "posts/*.md" // adding key 'collections':'posts'
+      posts: "posts/*.md"
     })
-  ) // use `collections.posts` in layouts
-  .use(markdown({ renderer })) // transpile all md into html
+  )
+  .use(markdown({ renderer }))
   .use(
     permalinks({
-      // change URLs to permalink URLs
-      relative: false // put css only in /css
+      relative: false
     })
   )
   .use(
     layouts({
-      // wrap layouts around html
-      engine: "handlebars" // use the layout engine you like
+      engine: "handlebars",
+      partials: "partials"
     })
   );

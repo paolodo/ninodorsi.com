@@ -1,5 +1,5 @@
 ---
-layout: layout.html
+layout: default.html
 title: Me in 10 Second
 ---
 
