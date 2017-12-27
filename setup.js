@@ -27,7 +27,11 @@ module.exports = Metalsmith(__dirname)
   .clean(true)
   .use(
     collections({
-      posts: "posts/*.md"
+      posts: {
+        pattern: "posts/*.md",
+        sortBy: "date",
+        reverse: true,
+      }
     })
   )
   .use(markdown({ renderer }))

@@ -1,6 +1,7 @@
 ---
 layout: default.html
 title: Fun-ctional Training
+date: 2017/12/27
 ---
 
 In my training experience, i started like **you**,
@@ -14,5 +15,4 @@ Now I don’t look anymore at the machine but I feel my body and i **move** my j
 The results are I fell more coordinated more flexible and with my posture is improved,
 
  
-
-Move Soon
+_Move Soon._

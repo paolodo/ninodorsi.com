@@ -17,4 +17,4 @@ Italian native, I now live in Brussels.
 
 My favorite quote: “Warning: Before beginning an program of physical inactivity, consult your doctor. Sedentary living is abnormal and dangerous to your health.” ― Frank Forencich, Exuberant Animal.
 
-That is what I’m doing [now](/now/)!
+That is what I’m doing [now](/posts/now/)!
