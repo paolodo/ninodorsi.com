@@ -4,6 +4,14 @@ var layouts = require("metalsmith-layouts");
 var markdown = require("metalsmith-markdown");
 var permalinks = require("metalsmith-permalinks");
 
+var marked = require("marked");
+var renderer = Object.assign(new marked.Renderer(), {
+  link: (href, title, text) =>
+    `<a href="${href}"${title ? ` title="${title}"` : ""}${
+      href.startsWith("http") ? ' target="_blank" rel="noopener"' : ""
+    }>${text}</a>`
+});
+
 module.exports = Metalsmith(__dirname) // __dirname defined by node.js:
   // name of current working directory
   .metadata({
@@ -23,7 +31,7 @@ module.exports = Metalsmith(__dirname) // __dirname defined by node.js:
       posts: "posts/*.md" // adding key 'collections':'posts'
     })
   ) // use `collections.posts` in layouts
-  .use(markdown()) // transpile all md into html
+  .use(markdown({ renderer })) // transpile all md into html
   .use(
     permalinks({
       // change URLs to permalink URLs
