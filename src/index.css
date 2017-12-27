@@ -48,6 +48,7 @@ h2 {
   margin: var(--spacing);
   text-align: justify;
   flex-grow: 1;
+  line-height: 1.75;
 }
 
 body > footer {

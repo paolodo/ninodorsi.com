@@ -1,15 +1,23 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   {{> meta }}
 </head>
+
 <body>
   {{> header }}
 
-  <h3>{{ title }}</h3>
-
-  {{{ contents }}}
+  <section class="main">
+    {{#each collections.posts}}
+    <article>
+      <h3>{{ title }}</h3>
+      {{{contents}}}
+    </article>
+    {{/each}}
+  </section>
 
   {{> footer }}
 </body>
+
 </html>
