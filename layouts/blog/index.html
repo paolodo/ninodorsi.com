@@ -9,7 +9,9 @@
   {{> header }}
 
   <section class="main">
-    {{#each collections.posts.sort((a, b) => a.date > b.date ? 1 : -1)}}
+    {{> me}}
+    
+    {{#each collections.posts}}
     <article>
       <h3>{{ title }}</h3>
       {{{contents}}}
