@@ -27,7 +27,7 @@ node index.js
 cd build
 rm -rf .git/
 git init
-git remote add origin $GITURL
+git remote add origin git@github.com:paolodo/ninodorsi.com.git
 git add .
 git commit -am "deploy"
 git push origin master:gh-pages --force
