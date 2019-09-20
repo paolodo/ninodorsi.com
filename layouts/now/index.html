@@ -11,12 +11,7 @@
   <section class="main">
     {{> me2}}
     
-    {{#each collections.posts}}
-    <article>
-      <h3>{{ title }}</h3>
-      {{{contents}}}
-    </article>
-    {{/each}}
+    {{{ contents }}}
   </section>
 
   {{> footer }}

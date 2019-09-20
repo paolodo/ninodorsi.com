@@ -1,5 +1,5 @@
 ---
-layout: default.html
+layout: now.html
 title: What I’m Doing Now
 date: 2017/12/26
 ---
